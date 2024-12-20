@@ -16,3 +16,7 @@ Route::get('/hello', function(){
 // Route::view('post', '/post');
 
 
+Route::get('/hello/subhello', function(){
+    return view('firstpost');
+});
+
