@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/helloss', function(){
+Route::get('/hello', function(){
     return view('post');
 });
 
@@ -34,5 +34,10 @@ Route::get('/hello/{id}', function(string $id) {
 Route::get('/about-us', function(){
     return view('about');
 })->name('mynamepage');
+
+
+Route::fallback(function(){
+    return "<h1>Page Not Found</h1>";
+});
 
 
